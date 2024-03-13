@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>study</title>
+    <style>
+        body, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;		/* 해당 태그의 list-style을 none으로 하는 것으로 ●을 제거한다 */
+        }
+          
+        a {
+            color: inherit;		/* 부모 엘리먼트의 값을 물려받는다 */
+            text-decoration: none;	/* 해당 태그의 text-decoration을 none으로 하는 것으로 밑줄을 제거한다 */
+        }
+          /* 노멀라이즈 끝 */
+          
+          /* 라이브러리 시작 */
+          .con {
+            margin-left: auto;
+            margin-right: auto;
+          }
+          /* 라이브러리 끝 */
+          
+          /* 커스텀 시작 */
+          :root {
+            --site-width: 100%;
+          }
+
+          .con-min-width {
+            min-width: var(--site-width);
+          }
+          
+          .top-bar > .con {
+            width: var(--site-width);
+            display: flex;
+          }
+
+          /* 드롭다운 메뉴 시작 */
+          .menubox > ul ul {
+            display: none;
+          }
+          
+          .menubox > ul > li {
+            display: inline-block;
+            position: relative;
+          }
+          
+          .menubox {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            min-width: 1200px; /* 최소 너비를 설정 */
+          }
+          
+          .menubox ul {
+            background-color: rgb(13, 96, 205);
+            color: rgb(242, 245, 247);
+          }
+          
+          .menubox ul > li > a {
+            display: block;
+            font-size: 1rem;
+            padding: 10px 40px;
+          }
+          
+          .menubox ul > li:hover > a {
+            background-color: #98c1ec;
+          }
+
+          .menubox ul > li:first-child > a:hover {
+            background-color: initial; /* 해당 링크의 hover 배경색을 초기값으로 되돌림 */
+          }
+
+          .menubox ul > li:nth-child(2) > ul > li:first-child > a:hover {
+            background-color: #98c1ec; /* 해당 링크의 hover 배경색을 초기값으로 되돌림 */
+          }
+
+          .menubox ul > li:nth-child(3) > ul > li:first-child > a:hover {
+            background-color: #98c1ec; /* 해당 링크의 hover 배경색을 초기값으로 되돌림 */
+          }
+
+          .menubox ul > li:nth-child(6) > ul > li:first-child > a:hover {
+            background-color: #98c1ec; /* 해당 링크의 hover 배경색을 초기값으로 되돌림 */
+          }
+
+          .menubox > ul > li {
+            position: relative;
+          }
+          
+          .menubox > ul > li > ul {
+            position: absolute;
+            top: 100%;
+            left: 0; 
+            width: 100%;
+            display: none;
+            z-index: 2;
+          }
+          
+          .menubox > ul > li:hover > ul {
+            display: block;
+          }
+          
+          /* 기타 메뉴에 대한 추가 스타일 */
+          /* .menubox > ul > li:nth-child(3) > ul {
+            display: block;
+          } */
+          .menubox > ul {
+            border-radius: 20px;
+          }         
+          <!--메뉴바 끝-->
+
+          .bottom-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #c4c4c4;
+            color: black;
+            padding: 10px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .bottom-bar a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .bottom-bar .notice {
+            width: 500px;
+            padding-left: 50px;
+            padding-top: 100px;
+            padding-bottom: 5px;
+        }
+
+        .bottom-bar .best-study {
+            width: 500px;
+            padding-left: 50px;
+            padding-bottom: 5px;
+            position: relative;
+            top: -230px;
+        }
+
+        .bottom-bar .review {
+            padding-left: 680px;
+            position: relative;
+            top: -140px;
+            z-index: -10;
+        }
+
+        .bottom-bar .bar_notice {
+            width: 500px;
+            height: 200px;
+            margin-left: 50px;
+            margin-bottom: 40px;
+            border-radius: 10px; 
+            background-color: rgb(212, 229, 253); 
+        }
+
+        .bottom-bar .bar_best {
+            width: 500px;
+            height: 150px;
+            margin-left: 50px;
+            border-radius: 10px; 
+            background-color: rgb(212, 229, 253); 
+            position: relative;
+            top: -230px;
+        }
+
+        .bottom-bar .bar_review {
+            width: 500px;
+            height: 200px;
+            position: relative;
+            top: -135px;
+            margin-left: 680px;
+            border-radius: 10px; 
+            background-color: rgb(212, 229, 253); 
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="top-bar con-min-width">
+        <div class="con">
+          <nav class="menubox">
+            <ul>
+                <li style="position:relative; margin-left:-150px">
+                    <a href="main.html" target="_self">홈(로고)</a>
+                </li>
+                <li>
+                    <a href="community.html" target="_self">Community</a>
+                    <ul>
+                        <li><a href="#">익명게시판</a></li>
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">기타</a></li>
+                    </ul>
+                </li>
+                <li style="padding-left:16px; padding-right:16px">
+                    <a href="#">Category</a>
+                    <ul>
+                        <li><a href="#">자격증스터디</a></li>
+                        <li><a href="#">공무원스터디</a></li>
+                        <li><a href="#">자기계발<br>스터디</a></li>
+                        <li><a href="#">지역별스터디</a></li>
+                        <li><a href="#">기타</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="mystudy.html">MyStudy</a>
+                </li>
+                <li>
+                    <a href="#">MyPage</a>
+                </li>
+                <li style="padding-left:5px; padding-right:5px">
+                    <a href="#">More</a>
+                    <ul>
+                    <li><a href="#">도움말</a></li>
+                    <li><a href="#">Q&A</a></li>
+                    <li><a href="#">소개</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Log in/회원가입</a>
+                </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="bottom-bar">
+        <div class="notice">
+            <a href="#">Notice</a>
+        </div>
+        <div class="bar_notice"></div>
+        <div class="review">
+            <a href="#">Review</a>
+        </div>     
+        <div class="bar_review"></div>
+        <div class="best-study">
+            <a href="#">Best Study</a>
+        </div>
+        <div class="bar_best"></div>
+        
+    </div>
+      
+</body>
+
+</html>
