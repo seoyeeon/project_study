@@ -1,0 +1,83 @@
+
+.community {
+    margin-top: 50px;
+}
+#category_box {
+    background-color: rgb(212, 229, 253);
+    display: inline-block;
+    width: 20%;
+    padding: 10px;
+    height:max-content;
+}
+#left {
+    position: fixed;
+    left: 20px;
+    top: 100px;
+    width: 200px;
+    bottom: 0;
+    background-color: rgb(212, 229, 253);
+    border-radius: 20px;
+}
+#left ul li{
+    padding: 10px;
+    font-weight: bold;
+
+}
+.search {
+    position: relative;
+    display: inline-block;
+    width: 95%;
+    padding: 20px;
+}
+input {
+    width: 95%;
+    border-radius: 9px;
+    border-color:rgb(13, 96, 205);
+    margin: 5px;
+    padding: 8px;
+    text-align: center;
+    font-size: large;
+
+}
+#board {
+    background-color: rgb(212, 229, 253);
+    position: fixed;
+    left: 250px;
+    top: 100px;
+    width:1250px;
+    height: 100%;
+    text-align: center;
+    border-radius: 20px;
+}
+.hot {
+    position: relative;
+    display: inline-block;
+    width: 95%;
+}
+.hot div {
+    width: 95%;
+    border: 3px solid #e85050;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    text-align: left;
+    font-size: large;
+    background-color: #ffd9d9;
+}
+.post {
+    position: relative;
+    display: inline-block;
+    width: 95%;
+    padding: 10px;
+}
+.post div {
+    width: 95%;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 5px;
+    text-align: left;
+    font-size: large;
+    background-color: rgb(255, 255, 247);
+    padding: 10px;
+}
