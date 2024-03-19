@@ -8,6 +8,7 @@
         //$("#menubar").load("menubar.html #top-bar con-min-width");     
     });
     </script>
+    
     <head>
         <meta charset="UTF-8">
         <title>MyStudy_Page</title>
@@ -31,6 +32,13 @@
             <p style="display:inline-block; position: absolute;
             font-size:1.5rem; text-align:center; left:50%;
             transform: translateX(-50%);">나의 일정</p>
+            <script>
+                $(document).ready(function(){
+                    $("#calendar").load("calendar.html")
+                    // id 지정을 통해서도 가능합니다.  
+                });
+                </script>
+            <div id="calendar"></div>
         </div>
         </div>
         
