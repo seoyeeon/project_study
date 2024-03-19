@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#menubar").load("menubar.html")
+        // id 지정을 통해서도 가능합니다. 
+        //$("#menubar").load("menubar.html #top-bar con-min-width");     
+    });
+    </script>
     <head>
         <meta charset="UTF-8">
         <title>MyStudy_Page</title>
         <link href = "menubar.css" type = "text/css" rel = "stylesheet">
     </head>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="menubar.js"></script>
+    
     <body>
         <div id="menubar"></div>
         <div id="board">

@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#menubar").load("menubar.html")
+    // id 지정을 통해서도 가능합니다. 
+    //$("#menubar").load("menubar.html #top-bar con-min-width");     
+  });
+</script>
 <head>
     <meta charset = "UTF-8">
     <title>study</title>
+    
     <style>
         body, ul, li {
             margin: 0;
@@ -181,8 +190,7 @@
         
     </style>
 </head>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="menubar.js"></script>
+
 <body>
   <div id="menubar"></div>
       <div class="bottom-bar">
@@ -202,5 +210,4 @@
     </div>
       
 </body>
-
 </html>
