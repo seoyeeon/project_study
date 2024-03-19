@@ -16,7 +16,16 @@
     </head>
     
     <body>
-        <div id="menubar"></div>
+        <header style="position: fixed; top: 0; left: 0; right: 0;"> 
+            <div id="menubar"></div>
+        </header>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#calendar").load("calendar.html")
+                // id 지정을 통해서도 가능합니다.  
+            });
+        </script>
         <div id="board">
             <div style="width:200px; height:450px; margin-left: 40px;
         border-radius: 10px; top:80px; position:relative; 
@@ -32,13 +41,10 @@
             <p style="display:inline-block; position: absolute;
             font-size:1.5rem; text-align:center; left:50%;
             transform: translateX(-50%);">나의 일정</p>
-            <script>
-                $(document).ready(function(){
-                    $("#calendar").load("calendar.html")
-                    // id 지정을 통해서도 가능합니다.  
-                });
-                </script>
+            
             <div id="calendar"></div>
+            
+            
         </div>
         </div>
         
