@@ -27,10 +27,10 @@ margin-right: auto;
 min-width: var(--site-width);
 }
 
-.top-bar {
+/*.top-bar {
     position: relative;
     z-index: 9999;
-}
+} */
 
 .top-bar > .con {
 width: var(--site-width);
@@ -94,6 +94,9 @@ position: relative;
     top: 100%;
     left: 0; 
     width: 100%;
+    /* add display, z-index */
+    display: none;
+    z-index: 2;
 }
 
 .menubox > ul > li:hover > ul {
@@ -102,4 +105,8 @@ display: block;
 
 .menubox > ul {
 border-radius: 20px;
+}
+
+#board {
+    z-index: -10;
 }
