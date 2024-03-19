@@ -7,7 +7,17 @@
         </title>
         <link href="login.css" rel="stylesheet">
     </head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#menubar").load("menubar.html")
+            // id 지정을 통해서도 가능합니다. 
+            //$("#menubar").load("menubar.html #top-bar con-min-width");     
+            console.log("1"); 
+        });
+    </script>
     <body>
+        <div id="menubar"></div>
         <div class="login-wrapper">
             <h2>Login</h2>
         <form method="post" action="서버의url" id="login-form">

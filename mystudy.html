@@ -5,53 +5,17 @@
         <title>MyStudy_Page</title>
         <link href = "menubar.css" type = "text/css" rel = "stylesheet">
     </head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#menubar").load("menubar.html")
+            // id 지정을 통해서도 가능합니다. 
+            //$("#menubar").load("menubar.html #top-bar con-min-width");     
+            console.log("1"); 
+        });
+    </script>
     <body>
-        <header class="top-bar con-min-width">
-            <div class="con">
-              <nav class="menubox">
-                <ul>
-                    <li style="position:relative; margin-left:-150px">
-                        <a href="main.html" target="_self">홈(로고)</a>
-                    </li>
-                    <li>
-                        <a href="community.html" target="_self">Community</a>
-                        <ul>
-                            <li><a href="#">익명게시판</a></li>
-                            <li><a href="#">자유게시판</a></li>
-                            <li><a href="#">기타</a></li>
-                        </ul>
-                    </li>
-                    <li style="padding-left:16px; padding-right:16px">
-                        <a href="#">Category</a>
-                        <ul>
-                            <li><a href="#">자격증스터디</a></li>
-                            <li><a href="#">공무원스터디</a></li>
-                            <li><a href="#">자기계발<br>스터디</a></li>
-                            <li><a href="#">지역별스터디</a></li>
-                            <li><a href="#">기타</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">MyStudy</a>
-                    </li>
-                    <li>
-                        <a href="#">MyPage</a>
-                    </li>
-                    <li style="padding-left:5px; padding-right:5px">
-                        <a href="#">More</a>
-                        <ul>
-                        <li><a href="#">도움말</a></li>
-                        <li><a href="#">Q&A</a></li>
-                        <li><a href="#">소개</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Log in/회원가입</a>
-                    </li>
-                </ul>
-              </nav>
-            </div>
-        </header>
+        <div id="menubar"></div>
 
         <div style="width:200px; height:450px; margin-left: 40px;
         border-radius: 10px; top:80px; position:relative; 

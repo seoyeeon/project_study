@@ -1,93 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset = "UTF-8">
-    <title>study</title>
-    <link rel="stylesheet" href="menubar.css" />
-    <link rel="stylesheet" href="community.css" />
-</head>
-<body>
-    <header class="top-bar con-min-width">
-        <div class="con">
-          <nav class="menubox">
-            <ul>
-                <li style="position:relative; margin-left:-150px">
-                    <a href="main.html" target="_self">홈(로고)</a>
-                </li>
-                <li>
-                    <a href="community.html" target="_self">Community</a>
-                    <ul>
-                        <li><a href="#">익명게시판</a></li>
-                        <li><a href="#">자유게시판</a></li>
-                        <li><a href="#">기타</a></li>
-                    </ul>
-                </li>
-                <li style="padding-left:16px; padding-right:16px">
-                    <a href="category.html">Category</a>
-                    <ul>
-                        <li><a href="#">자격증스터디</a></li>
-                        <li><a href="#">공무원스터디</a></li>
-                        <li><a href="#">자기계발<br>스터디</a></li>
-                        <li><a href="#">지역별스터디</a></li>
-                        <li><a href="#">기타</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="mystudy.html">MyStudy</a>
-                </li>
-                <li>
-                    <a href="#">MyPage</a>
-                </li>
-                <li style="padding-left:5px; padding-right:5px">
-                    <a href="#">More</a>
-                    <ul>
-                    <li><a href="#">도움말</a></li>
-                    <li><a href="#">Q&A</a></li>
-                    <li><a href="#">소개</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="loginpage1.html">Log in/회원가입</a>
-                </li>
-            </ul>
-          </nav>
+    <head>
+        <meta charset = "UTF-8">
+        <title>study</title>
+        <link rel="stylesheet" href="menubar.css" />
+        <link rel="stylesheet" href="community.css" />
+    </head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#menubar").load("menubar.html")
+            // id 지정을 통해서도 가능합니다. 
+            //$("#menubar").load("menubar.html #top-bar con-min-width");     
+            console.log("1"); 
+        });
+    </script>    
+    <body>
+        <div id="menubar"></div>
+        <div>
+            <aside id="left">
+                <ul>
+                    <li><a href="#">자격증스터디</a></li>
+                    <li><a href="#">공무원스터디</a></li>
+                    <li><a href="#">자기계발스터디</a></li>
+                    <li><a href="#">지역별스터디</a></li>
+                    <li><a href="#">기타</a></li>
+                </ul>
+            </aside>
         </div>
-      </header>
-      <div>
-        <aside id="left">
-            <ul>
-                <li><a href="#">자격증스터디</a></li>
-                <li><a href="#">공무원스터디</a></li>
-                <li><a href="#">자기계발<br>스터디</a></li>
-                <li><a href="#">지역별스터디</a></li>
-                <li><a href="#">기타</a></li>
-            </ul>
-        </aside>
-    </div>
-    <div id="board">
-        <div class="search">
-            <input type="text" placeholder="search">
-        </div>
-        <div class="hot">
-            <div>
-                <span>지금 핫한 글</span><br>
-                <span><b>제목</b></span><br>
-            </div>      
-        </div>
-        <div class="post">
-            <div>
-                <span><b>제목</b></span><br>
-                <span>본문</span>
+        <div id="board">
+            <div class="search">
+                <input type="text" placeholder="search">
             </div>
-            <div>
-                <span><b>제목</b></span><br>
-                <span>본문</span>
+            <div class="hot">
+                <div>
+                    <span>지금 핫한 글</span><br>
+                    <span><b>제목</b></span><br>
+                </div>      
+            </div>
+            <div class="post">
+                <div>
+                    <span><b>제목</b></span><br>
+                    <span>본문</span>
+                </div>
+                <div>
+                    <span><b>제목</b></span><br>
+                    <span>본문</span>
+                </div>
             </div>
         </div>
-    </div>
+            
+        </div>
         
-    </div>
-      
-</body>
-
+    </body>
 </html>
